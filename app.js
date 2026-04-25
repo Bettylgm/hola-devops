@@ -1,11 +1,4 @@
-const http = require('http');
-
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hola Mundo desde Docker 🚀\n');
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
-
-server.listen(3000, () => {
-  console.log('Servidor corriendo en puerto 3000');
-});
-
